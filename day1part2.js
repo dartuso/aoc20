@@ -2,10 +2,6 @@ const file = "day1.txt"
 const year = 2020;
 const fs = require("fs");
 
-function sortNumbers(a, b) {
-    return a - b;
-}
-
 function findDay1Part2() {
     let a = 0, b = 0, c = 0, product = 0;
     let number = fs.readFileSync(file).toString('utf-8').split('\r\n').map(x => {
