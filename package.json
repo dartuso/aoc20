@@ -2,20 +2,23 @@
   "name": "aoc20",
   "version": "1.0.0",
   "description": "",
-  "main": "day1.js",
+  "main": "day1/day1.js",
   "dependencies": {
     "fs": "^0.0.1-security",
     "node": "^15.3.0",
     "nodemon": "^2.0.6"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-typescript": "^7.12.7",
     "jest": "^26.6.3",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.2"
   },
   "scripts": {
-    "day1": "node day1.js",
-    "day2": "node day1part2.js",
+    "day1": "node day1/day1.js",
+    "day12": "node day1/day1part2.js",
+    "day2": "ts-node day2/day2.ts",
     "test": "jest"
   },
   "repository": {
