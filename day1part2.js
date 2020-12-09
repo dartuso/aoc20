@@ -6,7 +6,7 @@ function sortNumbers(a, b) {
     return a - b;
 }
 
-function findNumbers() {
+function findDay1Part2() {
     let a = 0, b = 0, c = 0, product = 0;
     let number = fs.readFileSync(file).toString('utf-8').split('\r\n').map(x => {
         return parseInt(x)
@@ -27,5 +27,6 @@ function findNumbers() {
     }
     return [a, b, c, product];
 }
+console.log(findDay1Part2())
 
-console.log(findNumbers())
+module.exports = findDay1Part2;
