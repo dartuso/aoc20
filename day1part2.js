@@ -6,22 +6,28 @@ function findDay1Part2() {
     let a = 0, b = 0, c = 0, product = 0;
     let number = fs.readFileSync(file).toString('utf-8').split('\r\n').map(x => {
         return parseInt(x)
-    });
+    }).sort(function(a, b){return a-b})
     let length = number.length
 
-    for (let i = 0; i < length; i++) {
-        for (let j = i + 1; j < length; j++) {
-            for (let k = j + 1; k < length; k++) {
-                if (year === (number[i] + number[j] + number[k])) {
-                    a = number[i];
-                    b = number[j];
-                    c = number[k];
-                    product = a * b * c;
-                }
+
+    for (let i = 0, l, r; i < length; i++) {
+        l = i + 1;
+        r = length - 1;
+        while (l < r) {
+            if (number[i] + number[l] + number[r] === year) {
+                a = number[i];
+                b = number[l];
+                c = number[r];
+                product = a * b * c;
+                break;
             }
+            else if (number[i] + number[l] + number[r] < year)
+                l++;
+            else // A[i] + A[l] + A[r] > sum
+                r--;
         }
     }
-    return [a, b, c, product];
+        return [a, b, c, product];
 }
 console.log(findDay1Part2())
 
