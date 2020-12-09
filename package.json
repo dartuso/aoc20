@@ -16,7 +16,6 @@
   "scripts": {
     "day1": "node day1.js",
     "day2": "node day1part2.js",
-    "dev": "nodemon day1.js",
     "test": "jest"
   },
   "repository": {
