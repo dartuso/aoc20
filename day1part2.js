@@ -11,7 +11,6 @@ function findNumbers() {
     let number = fs.readFileSync(file).toString('utf-8').split('\r\n').map(x => {
         return parseInt(x)
     });
-    number.sort(sortNumbers)
     let length = number.length
 
     for (let i = 0; i < length; i++) {
@@ -26,7 +25,6 @@ function findNumbers() {
             }
         }
     }
-    console.log(a + b + c)
     return [a, b, c, product];
 }
 
