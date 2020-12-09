@@ -1,4 +1,4 @@
-const file = "day1.txt"
+const file = "./day1/day1.txt"
 const year = 2020;
 const fs = require("fs");
 
