@@ -1,13 +1,11 @@
-
-
-interface Password{
+interface Password {
     minNum: number,
     maxNum: number,
     required: string,
     password: string
 }
 
-function findPasswordV2(){
+function findPasswordV2() {
     const fs = require("fs");
     const file = "./day2/input.txt"
 
@@ -17,7 +15,7 @@ function findPasswordV2(){
     passwords.forEach((str) => {
         let entry: Password = {
             minNum: 0,
-            maxNum:0,
+            maxNum: 0,
             required: "",
             password: ""
         }
@@ -33,14 +31,11 @@ function findPasswordV2(){
         let count: number = 0;
         let length: number = entry.password.length
         for (let i = 0; i < length; i++) {
-            if (entry.required === entry.password[i]){
+            if (entry.required === entry.password[i]) {
                 count++;
             }
         }
 
-        if (count >=  entry.minNum && count <= entry.maxNum){
-            answer++;
-        }
     });
 
     return answer;
