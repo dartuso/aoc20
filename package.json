@@ -19,6 +19,7 @@
     "day1": "node day1/day1.js",
     "day12": "node day1/day1part2.js",
     "day2": "ts-node day2/day2.ts",
+    "day21": "ts-node day2/day2part2.ts",
     "test": "jest"
   },
   "repository": {
